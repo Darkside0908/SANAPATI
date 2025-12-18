@@ -4,15 +4,19 @@ nixPkgs = ["nodejs_20", "php82", "php82Packages.composer"]
 [phases.install]
 cmds = [
     "composer install --optimize-autoloader --no-dev",
-    "npm ci"
+    "npm ci --include=dev"
 ]
 
 [phases.build]
 cmds = [
     "npm run build",
+    "bash post-build.sh",
     "php artisan config:cache",
     "php artisan view:cache"
 ]
 
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
+
+[variables]
+NODE_ENV = "production"
