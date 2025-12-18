@@ -1,5 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" 
+    x-data="{ 
+        darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+        toggleTheme() {
+            this.darkMode = !this.darkMode;
+            localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
+            if (this.darkMode) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    }"
+    x-init="$watch('darkMode', val => val ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')); if(darkMode) document.documentElement.classList.add('dark');"
+    :class="{ 'dark': darkMode }"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +41,8 @@
     </main>
     
     <!-- Footer -->
-    <footer class="py-8 mt-16 border-t border-cyan-900/30">
-        <div class="container mx-auto px-4 text-center text-gray-400">
+    <footer class="py-8 mt-16 border-t border-gray-200 dark:border-cyan-900/30 transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center text-gray-500 dark:text-gray-400">
             <p>&copy; {{ date('Y') }} BSSN - Badan Siber dan Sandi Negara</p>
             <p class="text-sm mt-2">SANAPATI - Sistem Akuntabilitas dan Navigasi Kinerja Siber-Sandi Terintegrasi</p>
         </div>

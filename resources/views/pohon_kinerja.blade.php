@@ -4,16 +4,15 @@
 
 @section('content')
 <div class="container mx-auto px-4 py-8" x-data="treeApp()">
-    <div class="flex justify-between items-center mb-8">
-        <div class="inline-flex flex-col px-12 py-8 rounded-[24px] border border-white/10 shadow-[0_0_40px_rgba(0,255,249,0.2)] relative overflow-hidden backdrop-blur-md"
-             style="background: rgba(10,14,20,0.65);">
-             <!-- Glow-cyan top accent (optional) -->
-             <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
+        <div class="inline-flex flex-col px-12 py-8 rounded-[24px] border border-subtle shadow-lg relative overflow-hidden backdrop-blur-md bg-surface-2/80 transition-colors duration-300">
+             <!-- Brand accent -->
+             <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-brand-cyan/50 to-transparent"></div>
              
-             <h1 class="text-5xl font-[800] text-[#36d7ff] tracking-wide" style="text-shadow: 0 4px 20px rgba(54, 215, 255, 0.4);">
+             <h1 class="text-4xl md:text-5xl font-[800] text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-cyan/70 tracking-wide">
                 Pohon Kinerja BSSN
             </h1>
-            <span class="text-xl font-medium text-white/50 block mt-2 tracking-[0.2em] uppercase">
+            <span class="text-xl font-medium text-fg-secondary block mt-2 tracking-[0.2em] uppercase">
                 2025 – 2029
             </span>
         </div>
@@ -26,12 +25,12 @@
                     x-model="searchQuery" 
                     @input.debounce.300ms="performSearch()"
                     placeholder="Cari sasaran / indikator..." 
-                    class="bg-cyber-navy border border-gray-700 rounded-lg px-4 py-2 text-white w-64 focus:outline-none focus:border-cyber-cyan focus:ring-1 focus:ring-cyber-cyan"
+                    class="bg-surface-1 border border-subtle rounded-lg px-4 py-2 text-fg-primary w-64 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan shadow-sm transition-colors"
                 >
             </div>
             
             <!-- Unit Filter -->
-            <select x-model="selectedUnit" @change="applyFilters()" class="bg-cyber-navy border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyber-cyan">
+            <select x-model="selectedUnit" @change="applyFilters()" class="bg-surface-1 border border-subtle rounded-lg px-4 py-2 text-fg-primary focus:outline-none focus:border-brand-cyan shadow-sm transition-colors">
                 <option value="">Semua Unit</option>
                 <template x-for="unit in availableUnits" :key="unit">
                     <option :value="unit" x-text="unit"></option>
@@ -39,8 +38,8 @@
             </select>
 
             <!-- Toggle Codes -->
-            <label class="flex items-center space-x-2 text-sm text-gray-400 cursor-pointer select-none">
-                <input type="checkbox" x-model="showCodes" @change="rerenderTree()" class="form-checkbox text-cyber-cyan rounded bg-cyber-navy border-gray-700">
+            <label class="flex items-center space-x-2 text-sm text-fg-secondary cursor-pointer select-none hover:text-fg-primary transition-colors">
+                <input type="checkbox" x-model="showCodes" @change="rerenderTree()" class="form-checkbox text-brand-cyan rounded bg-surface-1 border-subtle">
                 <span>Tampilkan Kode</span>
             </label>
         </div>
@@ -48,31 +47,31 @@
 
     <!-- Tree View Card - Full Width -->
     <div class="flex flex-col min-h-[600px] max-h-[85vh]">
-        <div class="bg-[#131b2c]/80 backdrop-blur-md border border-white/5 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex flex-col h-full overflow-hidden relative group">
+        <div class="bg-surface-2/90 backdrop-blur-md border border-subtle rounded-2xl shadow-xl flex flex-col h-full overflow-hidden relative group transition-colors duration-300">
             <!-- Glowing Border Effect -->
-            <div class="absolute inset-0 border border-white/5 rounded-2xl pointer-events-none z-20"></div>
+            <div class="absolute inset-0 border border-subtle rounded-2xl pointer-events-none z-20"></div>
             
             <!-- Toolbar -->
-            <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.02]">
-                <h3 class="font-semibold text-lg text-white tracking-wide flex items-center gap-2">
-                    <svg class="w-5 h-5 text-cyber-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            <div class="flex items-center justify-between px-6 py-4 border-b border-subtle bg-surface-1/50">
+                <h3 class="font-semibold text-lg text-fg-primary tracking-wide flex items-center gap-2">
+                    <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     Struktur Kinerja
                 </h3>
                 <div class="flex gap-2">
-                    <button @click="expandAll()" class="px-3 py-1.5 text-xs font-medium text-cyber-cyan/80 hover:text-cyber-cyan hover:bg-cyber-cyan/10 rounded transition-colors uppercase tracking-wider">
+                    <button @click="expandAll()" class="px-3 py-1.5 text-xs font-medium text-brand-cyan hover:bg-brand-cyan/10 rounded transition-colors uppercase tracking-wider">
                         Expand All
                     </button>
-                     <button @click="collapseAll()" class="px-3 py-1.5 text-xs font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded transition-colors uppercase tracking-wider">
+                     <button @click="collapseAll()" class="px-3 py-1.5 text-xs font-medium text-fg-secondary hover:text-fg-primary hover:bg-surface-3 rounded transition-colors uppercase tracking-wider">
                         Collapse
                     </button>
                 </div>
             </div>
 
             <!-- Scrollable Tree Area -->
-            <div class="flex-1 overflow-y-auto overflow-x-auto p-6 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+            <div class="flex-1 overflow-y-auto overflow-x-auto p-6 custom-scrollbar">
                 <div x-show="loading" class="flex flex-col items-center justify-center h-40 space-y-4 animate-pulse">
-                    <div class="w-8 h-8 border-2 border-cyber-cyan border-t-transparent rounded-full animate-spin"></div>
-                    <span class="text-gray-400 text-sm font-mono">Memuat data pohon...</span>
+                    <div class="w-8 h-8 border-2 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
+                    <span class="text-fg-secondary text-sm font-mono">Memuat data pohon...</span>
                 </div>
                 
                 <div x-show="!loading">
@@ -87,7 +86,7 @@
     <div 
         x-show="showModal" 
         style="display: none;"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
@@ -96,68 +95,68 @@
         x-transition:leave-end="opacity-0"
     >
         <div 
-            class="bg-[#131b2c] border border-cyber-cyan/30 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-[0_0_50px_rgba(0,255,249,0.1)] p-8 relative"
+            class="bg-surface-1 border border-subtle rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl p-8 relative"
             @click.away="closeModal()"
         >
-            <button @click="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-full transition-all">
+            <button @click="closeModal()" class="absolute top-4 right-4 text-fg-secondary hover:text-fg-primary bg-surface-3 hover:bg-surface-2 p-2 rounded-full transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
 
             <template x-if="selectedNode">
-                <div class="animate-fade-in-up">
-                        <div class="border-b border-white/10 pb-6 mb-6">
+                <div class="animate-fade-in">
+                        <div class="border-b border-subtle pb-6 mb-6">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider border"
                                     :class="getLevelBadgeColor(selectedNode.level_type)">
                                 <span x-text="selectedNode.level_type"></span>
                             </span>
-                            <span class="text-sm font-mono text-gray-500" x-text="selectedNode.code"></span>
+                            <span class="text-sm font-mono text-fg-secondary" x-text="selectedNode.code"></span>
                         </div>
-                        <h2 class="text-2xl font-bold text-white mt-2 leading-tight" x-text="selectedNode.title"></h2>
+                        <h2 class="text-2xl font-bold text-fg-primary mt-2 leading-tight" x-text="selectedNode.title"></h2>
                     </div>
 
                     <!-- Description / Note -->
-                    <div x-show="selectedNode.note" class="mb-8 bg-blue-900/10 p-5 rounded-xl border border-blue-500/10">
-                        <h3 class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <div x-show="selectedNode.note" class="mb-8 bg-blue-50 dark:bg-blue-900/10 p-5 rounded-xl border border-blue-100 dark:border-blue-500/10">
+                        <h3 class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-2">
                              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             Deskripsi
                         </h3>
-                        <p class="text-blue-100/80 text-sm leading-relaxed" x-text="selectedNode.note"></p>
+                        <p class="text-blue-800 dark:text-blue-100/80 text-sm leading-relaxed" x-text="selectedNode.note"></p>
                     </div>
 
                     <!-- Indikator -->
                     <div class="mb-8">
-                        <h3 class="text-sm font-bold text-white mb-4 border-l-4 border-cyber-purple pl-3">Indikator Kinerja</h3>
+                        <h3 class="text-sm font-bold text-fg-primary mb-4 border-l-4 border-brand-purple pl-3">Indikator Kinerja</h3>
                         <div class="grid gap-3">
                             <template x-if="selectedNode.indicators && selectedNode.indicators.length > 0">
                                 <template x-for="ind in selectedNode.indicators">
-                                    <div class="bg-white/[0.03] p-4 rounded-xl border border-white/5 hover:border-cyber-purple/30 transition-all">
+                                    <div class="bg-surface-2 p-4 rounded-xl border border-subtle hover:border-brand-purple/30 transition-all">
                                         <div class="flex justify-between items-start mb-2">
-                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-cyber-purple/10 text-cyber-purple" x-text="ind.kind"></span>
-                                            <span x-show="ind.unit_owner" class="text-xs text-gray-500 font-mono" x-text="ind.unit_owner"></span>
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-purple/10 text-brand-purple" x-text="ind.kind"></span>
+                                            <span x-show="ind.unit_owner" class="text-xs text-fg-secondary font-mono" x-text="ind.unit_owner"></span>
                                         </div>
-                                        <p class="text-sm text-gray-200" x-text="ind.name"></p>
-                                        <div class="mt-3 text-xs text-cyber-green font-mono bg-cyber-green/5 inline-block px-2 py-1 rounded" x-show="ind.target">Target: <span x-text="ind.target"></span></div>
+                                        <p class="text-sm text-fg-primary" x-text="ind.name"></p>
+                                        <div class="mt-3 text-xs text-brand-green font-mono bg-brand-green/5 inline-block px-2 py-1 rounded" x-show="ind.target">Target: <span x-text="ind.target"></span></div>
                                     </div>
                                 </template>
                             </template>
                              <template x-if="!selectedNode.indicators || selectedNode.indicators.length === 0">
-                                <p class="text-sm text-gray-500 italic">Tidak ada indikator langsung.</p>
+                                <p class="text-sm text-fg-secondary italic">Tidak ada indikator langsung.</p>
                             </template>
                         </div>
                     </div>
 
                         <!-- Unit Penanggung Jawab -->
                     <div>
-                        <h3 class="text-sm font-bold text-white mb-4 border-l-4 border-blue-500 pl-3">Penanggung Jawab</h3>
+                        <h3 class="text-sm font-bold text-fg-primary mb-4 border-l-4 border-brand-cyan pl-3">Penanggung Jawab</h3>
                         <div class="flex flex-wrap gap-2">
                                 <template x-if="selectedNode.units && selectedNode.units.length > 0">
                                 <template x-for="unit in selectedNode.units">
-                                    <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded text-sm border border-gray-600 font-mono" x-text="unit.code"></span>
+                                    <span class="px-3 py-1 bg-surface-3 text-fg-primary rounded text-sm border border-subtle font-mono" x-text="unit.code"></span>
                                 </template>
                             </template>
                             <template x-if="!selectedNode.units || selectedNode.units.length === 0">
-                                <span class="text-sm text-gray-500 italic">-</span>
+                                <span class="text-sm text-fg-secondary italic">-</span>
                             </template>
                         </div>
                     </div>
@@ -294,19 +293,19 @@
             renderSearchResults(results, container) {
                 container.innerHTML = '';
                 if(results.length === 0) {
-                    container.innerHTML = '<li class="text-gray-400 italic p-4 text-center">Tidak ditemukan hasil.</li>';
+                    container.innerHTML = '<li class="text-fg-secondary italic p-4 text-center">Tidak ditemukan hasil.</li>';
                     return;
                 }
                 results.forEach(node => {
                    const li = document.createElement('li');
-                   li.className = 'mb-2 p-3 bg-white/5 rounded-lg border border-white/10 cursor-pointer hover:border-cyber-cyan/50 hover:bg-white/10 transition-all group';
+                   li.className = 'mb-2 p-3 bg-surface-2 rounded-lg border border-subtle cursor-pointer hover:border-brand-cyan/50 hover:bg-surface-3 transition-all group';
                    li.innerHTML = `
                         <div class="flex items-center justify-between">
                             <div class="flex items-center overflow-hidden gap-3">
                                 <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded border ${this.getLevelBadgeClass(node.level_type)}">${node.level_type}</span>
-                                <span class="text-white text-sm truncate font-medium group-hover:text-cyber-cyan transition-colors">${node.title}</span>
+                                <span class="text-fg-primary text-sm truncate font-medium group-hover:text-brand-cyan transition-colors">${node.title}</span>
                             </div>
-                            <button class="text-xs text-cyber-cyan opacity-0 group-hover:opacity-100 transition-opacity">Detail →</button>
+                            <button class="text-xs text-brand-cyan opacity-0 group-hover:opacity-100 transition-opacity">Detail →</button>
                         </div>
                    `;
                    li.onclick = () => this.openModal(node.code);
@@ -315,6 +314,7 @@
             },
 
             getLevelBadgeColor(type) {
+                // Use semantic semantic colors for badges
                 const colors = {
                     'UO': 'bg-red-500/10 text-red-500 border-red-500/20',
                     'IntO_L1': 'bg-orange-500/10 text-orange-500 border-orange-500/20',
@@ -348,18 +348,18 @@
                 const caretId = `caret-${uniqueId}`;
 
                 const contentDiv = document.createElement('div');
-                contentDiv.className = `group relative flex items-center py-2.5 px-3 rounded-lg transition-all duration-200 hover:bg-white/[0.06] border border-transparent hover:border-white/10`;
+                contentDiv.className = `group relative flex items-center py-2.5 px-3 rounded-lg transition-all duration-200 hover:bg-surface-3 border border-transparent hover:border-subtle`;
                 
                 const toggleBtn = document.createElement('button');
-                toggleBtn.className = `mr-3 w-6 h-6 flex items-center justify-center rounded hover:bg-white/10 text-gray-400 transition-colors z-10 ${hasChildren ? 'cursor-pointer hover:text-cyber-cyan' : 'opacity-20 cursor-default'}`;
+                toggleBtn.className = `mr-3 w-6 h-6 flex items-center justify-center rounded hover:bg-surface-3 text-fg-secondary transition-colors z-10 ${hasChildren ? 'cursor-pointer hover:text-brand-cyan' : 'opacity-20 cursor-default'}`;
                 if(hasChildren) {
-                    toggleBtn.innerHTML = `<svg id="${caretId}" class="w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-90 text-cyber-cyan' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
+                    toggleBtn.innerHTML = `<svg id="${caretId}" class="w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-90 text-brand-cyan' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
                     toggleBtn.onclick = (e) => {
                         e.stopPropagation();
                         this.toggleExpand(node.code, ulId, caretId);
                     };
                 } else {
-                    toggleBtn.innerHTML = '<div class="w-2 h-2 rounded-full bg-gray-700"></div>';
+                    toggleBtn.innerHTML = '<div class="w-2 h-2 rounded-full bg-gray-400/50"></div>';
                 }
                 
                 // Badge
@@ -371,13 +371,13 @@
                 const textContainer = document.createElement('div');
                 textContainer.className = 'flex-1 min-w-0';
                 textContainer.innerHTML = `
-                    <div class="text-base font-medium text-gray-100 group-hover:text-white transition-colors">${node.title}</div>
-                    ${this.showCodes ? `<div class="text-xs text-gray-500 font-mono mt-0.5">${node.code}</div>` : ''}
+                    <div class="text-base font-medium text-fg-primary group-hover:text-fg-primary transition-colors">${node.title}</div>
+                    ${this.showCodes ? `<div class="text-xs text-fg-secondary font-mono mt-0.5">${node.code}</div>` : ''}
                 `;
                 
                 // Eye Icon - Always visible
                 const detailBtn = document.createElement('button');
-                detailBtn.className = 'ml-3 text-gray-400 hover:text-cyber-cyan transition-all px-2 py-2 rounded-lg hover:bg-cyber-cyan/10 flex items-center gap-1.5';
+                detailBtn.className = 'ml-3 text-fg-secondary hover:text-brand-cyan transition-all px-2 py-2 rounded-lg hover:bg-brand-cyan/10 flex items-center gap-1.5';
                 detailBtn.innerHTML = `
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -398,7 +398,7 @@
                 if (hasChildren) {
                     const ul = document.createElement('ul');
                     ul.id = ulId;
-                    ul.className = `ml-[25px] pl-3 border-l border-white/5 mt-1 ${isExpanded ? '' : 'hidden'}`;
+                    ul.className = `ml-[25px] pl-3 border-l border-subtle mt-1 ${isExpanded ? '' : 'hidden'}`;
                     node.children.forEach((child, idx) => {
                         this.buildNodeHtml(child, ul, level + 1, idx === node.children.length - 1);
                     });
@@ -412,4 +412,3 @@
 </script>
 @endpush
 @endsection
-
