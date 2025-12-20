@@ -20,10 +20,6 @@ Route::get('/bantuan', function () {
     return view('bantuan');
 })->name('help');
 
-Route::get('/masuk', function () {
-    return view('masuk');
-})->name('login');
-
 // API Routes
 Route::prefix('api')->group(function () {
     Route::get('/tree', [TreeController::class, 'index'])->name('api.tree');

@@ -38,10 +38,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                 </button>
-
-                <a href="{{ route('login') }}" class="ml-4 px-5 py-2 rounded-lg bg-brand-cyan text-white text-sm font-semibold hover:bg-cyan-500 transition shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30">
-                    Masuk
-                </a>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -72,7 +68,6 @@
             <a href="{{ route('tree') }}" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition">Pohon Kinerja</a>
             <a href="{{ route('dashboard') }}" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition">Dashboard</a>
             <a href="{{ route('help') }}" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition">Bantuan</a>
-            <a href="{{ route('login') }}" class="block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-white dark:text-gray-900 font-semibold text-center">Masuk</a>
             <!-- Mobile Toggle -->
             <button @click="toggleTheme()" class="w-full text-left px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition flex items-center gap-2">
                 <span x-text="darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">Switch Theme</span>
