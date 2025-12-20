@@ -95,7 +95,7 @@
         x-transition:leave-end="opacity-0"
     >
         <div 
-            class="bg-surface-1 border border-subtle rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl p-8 relative"
+            class="bg-surface-1 border border-subtle rounded-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl p-8 relative"
             @click.away="closeModal()"
         >
             <button @click="closeModal()" class="absolute top-4 right-4 text-fg-secondary hover:text-fg-primary bg-surface-3 hover:bg-surface-2 p-2 rounded-full transition-all">
