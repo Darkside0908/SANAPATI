@@ -1,0 +1,1172 @@
+{
+  "nodes": [
+    {
+      "code": "UO 1",
+      "title": "Meningkatnya tata kelola keamanan siber dan sandi Indonesia",
+      "level_type": "UO",
+      "parent_code": null,
+      "source_page": "Gambar 8, Lampiran I",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai GCI Indonesia",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase Keberhasilan Pengamanan Informasi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1",
+      "title": "Meningkatnya keamanan dan ketahanan siber dan sandi nasional",
+      "level_type": "IntO_L1",
+      "parent_code": "UO 1",
+      "source_page": "Lampiran I (SS1)",
+      "indicators": [
+        {
+          "code": "1.1",
+          "name": "Indeks keamanan dan ketahanan siber",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": "1.2",
+          "name": "Indeks Keamanan Informasi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1.1",
+      "title": "Meningkatnya kematangan keamanan siber dan sandi PSE dan penyelenggara persandian",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.1",
+      "source_page": "Lampiran I (Deputi III & IV)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase PSE sektor Pemerintahan dan Pembangunan manusia dengan tingkat kematangan keamanan siber minimum level 3 (terdefinisi)",
+          "kind": "kinerja",
+          "unit_owner": "D3",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase PSE sektor Perekonomian manusia dengan tingkat kematangan keamanan siber minimum level 3 (terdefinisi)",
+          "kind": "kinerja",
+          "unit_owner": "D4",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase penyelenggara persandian sektor Pemerintahan dengan tingkat kematangan persandian minimal level III",
+          "kind": "kinerja",
+          "unit_owner": "D3",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Kematangan Keamanan Siber PSE (amanah RPJMN)",
+          "kind": "kinerja",
+          "unit_owner": "D3 D4",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Kematangan Penyelenggaraan Persandian (amanah RPJMN)",
+          "kind": "kinerja",
+          "unit_owner": "D3",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.1.1",
+      "title": "Meningkatnya kematangan penyelenggaraan keamanan siber dan sandi",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.1",
+      "source_page": "Lampiran I (SK Unit Kerja)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai kematangan keamanan siber PSE Sektor Pemerintah Pusat",
+          "kind": "kinerja",
+          "unit_owner": "D31",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan penyelenggara persandian Sektor Pemerintah Pusat",
+          "kind": "kinerja",
+          "unit_owner": "D31",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan keamanan siber PSE Sektor Pemerintah Daerah",
+          "kind": "kinerja",
+          "unit_owner": "D32",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan penyelenggara persandian Sektor Pemerintah Daerah",
+          "kind": "kinerja",
+          "unit_owner": "D32",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan keamanan siber PSE sektor pembangunan manusia",
+          "kind": "kinerja",
+          "unit_owner": "D33",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan Keamanan siber PSE sektor Keuangan, Perdagangan, Pariwisata dan Ekonomi Kreatif",
+          "kind": "kinerja",
+          "unit_owner": "D41",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan keamanan siber PSE Sektor Energi dan Sumber Daya Alam",
+          "kind": "kinerja",
+          "unit_owner": "D42",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan Keamanan siber PSE sektor TIK, media, transportasi serta logistik",
+          "kind": "kinerja",
+          "unit_owner": "D43",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai kematangan keamanan siber PSE sektor industri dan jasa konstruksi",
+          "kind": "kinerja",
+          "unit_owner": "D44",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1.2",
+      "title": "Meningkatnya manfaat kebijakan dan kerja sama keamanan siber dan sandi dalam penanganan gangguan keamanan siber",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.1",
+      "source_page": "Lampiran I (Deputi I)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase kerja sama keamanan siber dan sandi yang memberikan manfaat terhadap total kerja sama Siber dan Sandi Nasional terkait pengelolaan strategi dan kebijakan",
+          "kind": "kinerja",
+          "unit_owner": "D1",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase manfaat (benefit) terhadap biaya (cost) kebijakan keamanan siber dan sandi nasional",
+          "kind": "kinerja",
+          "unit_owner": "D1",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.2.1",
+      "title": "Meningkatnya implementasi Kebijakan Keamanan Siber dan Sandi Nasional",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.2",
+      "source_page": "Lampiran I (Direktorat D1)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase kebijakan yang diterapkan terhadap total kebijakan teknis strategi keamanan siber dan sandi yang ditetapkan",
+          "kind": "kinerja",
+          "unit_owner": "D11",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kebijakan yang diterapkan terhadap total kebijakan tata kelola keamanan siber dan sandi yang ditetapkan",
+          "kind": "kinerja",
+          "unit_owner": "D12",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kebijakan yang diterapkan terhadap total kebijakan teknologi keamanan siber dan sandi yang ditetapkan",
+          "kind": "kinerja",
+          "unit_owner": "D13",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kebijakan yang diterapkan terhadap total kebijakan SDM keamanan siber dan sandi yang ditetapkan",
+          "kind": "kinerja",
+          "unit_owner": "D14",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.2.2",
+      "title": "Meningkatnya kualitas kerja sama keamanan siber dan sandi",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.2",
+      "source_page": "Lampiran I (Direktorat D1, D2, D3, D4)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase kerja sama terkait pengelolaan strategi keamanan siber dan sandi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D11",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase peran aktif BSSN dalam kegiatan internasional bidang keamanan siber dan sandi",
+          "kind": "kinerja",
+          "unit_owner": "D11",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama terkait pengelolaan kebijakan tata kelola keamanan siber dan sandi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D12",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama terkait pengelolaan kebijakan teknologi keamanan siber dan sandi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D13",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama terkait pengelolaan kebijakan SDM keamanan siber dan sandi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D14",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama operasi keamanan siber yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama operasi Keamanan dan Pengendalian Informasi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D22",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama operasi sandi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D23",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama operasi deteksi sinyal yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D23",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi sektor Pemerintah Pusat yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D31",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan Kapasitas Keamanan Siber PSE Sektor Pemerintah Daerah yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D32",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi sektor Pembangunan Manusia yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D33",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi sektor Keuangan, Perdagangan, Pariwisata dan Ekonomi Kreatif yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D41",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi PSE Sektor Energi dan Sumber Daya Alam yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D42",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi PSE sektor TIK, Media dan Transportasi serta logistik yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D43",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase kerja sama Peningkatan kapasitas keamanan siber dan sandi sektor Industri dan jasa konstruksi yang ditindaklanjuti",
+          "kind": "kinerja",
+          "unit_owner": "D44",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1.3",
+      "title": "Meningkatnya kesadaran masyarakat terhadap keamanan siber dan sandi",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.1",
+      "source_page": "Lampiran I (Deputi II, III, IV)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Tingkat kesadaran masyarakat terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D2",
+          "satuan": "Tingkat",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat kesadaran K/L/Pemda terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D3",
+          "satuan": "Tingkat",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat kesadaran PSE sektor Pembangunan manusia terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D3",
+          "satuan": "Tingkat",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat kesadaran PSE sektor perekonomian terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D4",
+          "satuan": "Tingkat",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.3.1",
+      "title": "Meningkatnya pengetahuan dan pemahaman masyarakat terhadap keamanan siber dan sandi",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.3",
+      "source_page": "Lampiran I (Direktorat)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman masyarakat terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D22",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman K/L terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D31",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman Pemda terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D32",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman PSE sektor Pembangunan manusia terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D33",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman PSE sektor Keuangan, Perdagangan, Pariwisata dan Ekonomi Kreatif terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D41",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman PSE Sektor Energi dan Sumber Daya Alam terhadap keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D42",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman PSE sektor TIK, media, transportasi serta logistik terhadap keamanan siber dan sandi",
+          "kind": "kinerja",
+          "unit_owner": "D43",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengetahuan dan pemahaman PSE sektor industri dan jasa konstruksi terhadap keamanan siber dan sandi",
+          "kind": "kinerja",
+          "unit_owner": "D44",
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1.4",
+      "title": "Meningkatnya kesiapsiagaan dan ketahanan siber nasional dalam mengantisipasi serangan siber dan gangguan keamanan informasi",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.1",
+      "source_page": "Lampiran I (Deputi II)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Indeks kesiapsiagaan dan ketahanan siber nasional",
+          "kind": "kinerja",
+          "unit_owner": "D2",
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.4.1",
+      "title": "Meningkatnya kualitas lulusan Diklat siber dan sandi yang bekerja di bidangnya",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.4",
+      "source_page": "Lampiran I (Pusbang SDM & PSSN)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Rata-rata Competency Gap Index (CGI) SDM siber dan sandi",
+          "kind": "kinerja",
+          "unit_owner": "P3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase lulusan pelatihan SDM Keamanan Siber dan Sandi dengan nilai minimal memuaskan",
+          "kind": "kinerja",
+          "unit_owner": "P3",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase lulusan SDM siber dan sandi dengan nilai pendidikan minimum 'Baik'",
+          "kind": "kinerja",
+          "unit_owner": "PSSN",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat penerimaan (acceptance rate) publikasi penelitian bidang Keamanan Siber dan Kriptografi terakreditasi Nasional atau Internasional",
+          "kind": "kinerja",
+          "unit_owner": "PSSN",
+          "satuan": "Tingkat/Rate",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase program pengabdian kepada masyarakat yang termanfaatkan oleh masyarakat",
+          "kind": "kinerja",
+          "unit_owner": "PSSN",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase ketercapaian standar mutu pendidikan",
+          "kind": "kinerja",
+          "unit_owner": "PSSN",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.4.2",
+      "title": "Meningkatnya Respon PSE terhadap potensi gangguan keamanan siber dan keamanan informasi risiko tinggi",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.4",
+      "source_page": "Lampiran I (D21, D23, BBSrE, BLPID)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase PSE yang merespon notifikasi potensi gangguan keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase hasil deteksi ancaman keamanan siber yang tervalidasi benar",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase keberhasilan pencegahan potensi ancaman keamanan siber menjadi insiden pada stakeholder",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase penerapan kriptografi yang efektif menjamin perlindungan data dalam sistem elektronik terhadap total insiden siber yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": "D23",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase rekomendasi hasil analisis sinyal terhadap deteksi sinyal",
+          "kind": "kinerja",
+          "unit_owner": "D23 BDS",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase ketersediaan sistem sertifikasi elektronik",
+          "kind": "kinerja",
+          "unit_owner": "BBSrE",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Rata-rata waktu yang dibutuhkan untuk menerbitkan sertifikat elektronik",
+          "kind": "kinerja",
+          "unit_owner": "BBSrE",
+          "satuan": "Waktu",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Rata-rata waktu pemanfaatan layanan sertifikat elektronik",
+          "kind": "kinerja",
+          "unit_owner": "BBSrE",
+          "satuan": "Waktu",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase sertifikat elektronik yang dimanfaatkan terhadap total sertifikat elektronik yang diterbitkan",
+          "kind": "kinerja",
+          "unit_owner": "BBSrE",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat kepuasan atas Layanan Sertifikat Elektronik",
+          "kind": "kinerja",
+          "unit_owner": "BBSrE",
+          "satuan": "Tingkat/Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase Ketersediaan Sistem Layanan Penghubung Identitas Digital",
+          "kind": "kinerja",
+          "unit_owner": "BLPID",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.4.3",
+      "title": "Meningkatnya kualitas penanganan insiden siber",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.4",
+      "source_page": "Lampiran I (D21, D22, D23)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Rata-rata waktu yang dibutuhkan dalam memulihkan insiden keamanan siber",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "Waktu",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase insiden keamanan siber yang dapat diatasi terhadap total insiden keamanan siber yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase insiden keamanan informasi yang dapat diatasi terhadap total insiden keamanan informasi yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": "D22",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase insiden keamanan informasi yang dapat diatasi melalui operasi kriptografi dan keamanan sinyal terhadap total insiden keamanan informasi yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": "D23",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.4.4",
+      "title": "Dimanfaatkannya teknologi keamanan siber dan sandi yang handal",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.4",
+      "source_page": "Lampiran I (Pusertif)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase produk teknologi keamanan siber dan sandi yang tersertifikasi tepat waktu dari total pengajuan sertifikasi",
+          "kind": "kinerja",
+          "unit_owner": "P1",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase produk teknologi keamanan siber dan sandi yang lulus uji tepat waktu dari total pengajuan pengujian",
+          "kind": "kinerja",
+          "unit_owner": "P1",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase Rekomendasi Hasil Pemutakhiran Sistem Keamanan Siber dan Sandi yang dimanfaatkan K/L",
+          "kind": "kinerja",
+          "unit_owner": "P1",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase pemanfaatan inovasi hasil perekayasaan di bidang keamanan siber dan sandi",
+          "kind": "kinerja",
+          "unit_owner": "P1",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat Kepuasan atas Layanan Pusat Sertifikasi Teknologi Keamanan Siber dan Sandi",
+          "kind": "kinerja",
+          "unit_owner": "P1",
+          "satuan": "Tingkat/Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.4.5",
+      "title": "Terlindunginya Infrastruktur Informasi Vital (IIV) dari serangan siber",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.4",
+      "source_page": "Lampiran I (D21)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase IIV yang terlindungi terhadap total IIV yang telah ditetapkan oleh sektor",
+          "kind": "kinerja",
+          "unit_owner": "D21",
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.1.5",
+      "title": "Terwujudnya penegakan hukum keamanan siber dan keamanan informasi",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.1",
+      "source_page": "Lampiran I",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Indeks penegakan hukum keamanan siber (Pro Justicia, Penindakan dan kepatuhan)",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks penegakan keamanan informasi nasional (Pro Justicia, Penindakan dan kepatuhan)",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks Pengendalian ekosistem Keamanan Informasi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.5.1",
+      "title": "Meningkatnya kualitas penyelidikan dan penindakan keamanan siber dan keamanan informasi",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.5",
+      "source_page": "Lampiran I",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase pelanggaran hukum yang selesai ditangani (P21) terhadap total pelanggaran hukum keamanan siber dan keamanan informasi yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase penindakan gangguan keamanan siber terhadap total gangguan keamanan siber yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase penindakan gangguan keamanan informasi terhadap total gangguan keamanan informasi yang terjadi",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "%",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.1.5.2",
+      "title": "Meningkatnya Kepatuhan PSE, PSrE dan IPPD terhadap peraturan perundang-undangan keamanan siber dan keamanan informasi yang berlaku",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.1.5",
+      "source_page": "Lampiran I (D22)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Persentase sistem elektronik yang memenuhi kategori 'Patuh' terhadap total sistem elektronik yang didaftarkan",
+          "kind": "kinerja",
+          "unit_owner": "D22",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Rata-rata nilai SPBE K/L/Pemda untuk domain arsitektur keamanan SPBE",
+          "kind": "kinerja",
+          "unit_owner": "D22",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "UO 2",
+      "title": "Meningkatnya Birokrasi Nasional dan Tata Kelola",
+      "level_type": "UO",
+      "parent_code": null,
+      "source_page": "Gambar 21, Lampiran I",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Indeks Reformasi Birokrasi Nasional",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.2",
+      "title": "Meningkatnya pelaksanaan penajaman reformasi birokrasi BSSN",
+      "level_type": "IntO_L1",
+      "parent_code": "UO 2",
+      "source_page": "Lampiran I (SS2)",
+      "indicators": [
+        {
+          "code": "2.1",
+          "name": "Indeks Reformasi Birokrasi (RB BSSN)",
+          "kind": "kinerja",
+          "unit_owner": null,
+          "satuan": "Indeks",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Int.O.2.1",
+      "title": "Meningkatnya hasil pelaksanaan RB General",
+      "level_type": "IntO_L2",
+      "parent_code": "Int.O.2",
+      "source_page": "Lampiran I (SU)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai RB General BSSN",
+          "kind": "kinerja",
+          "unit_owner": "SU",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.2.1.1",
+      "title": "Optimalnya strategi pelaksanaan RB General",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.2.1",
+      "source_page": "Lampiran I (S2, IR)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai rencana aksi pembangunan RB general",
+          "kind": "kinerja",
+          "unit_owner": "S2",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat implementasi rencana aksi pembangunan RB general",
+          "kind": "kinerja",
+          "unit_owner": "IR",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.2.1.2",
+      "title": "Optimalnya Capaian Pelaksanaan Kebijakan RB",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.2.1",
+      "source_page": "Lampiran I (S1, S2, S3, S4, IR, P2)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai SAKIP",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks perencanaan pembangunan",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Indikator Kinerja Pelaksanaan Anggaran (IKPA)",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase penyederhanaan struktur organisasi",
+          "kind": "kinerja",
+          "unit_owner": "S2",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat capaian sistem kerja untuk penyederhanaan birokrasi",
+          "kind": "kinerja",
+          "unit_owner": "S2",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai indeks sistem merit",
+          "kind": "kinerja",
+          "unit_owner": "S2",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Indeks Reformasi Hukum (IRH)",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Indeks Kualitas Kebijakan (IKK)",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat digitalisasi arsip",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat kepatuhan standar pelayanan publik",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai indeks pelayanan publik",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Tingkat tindak lanjut pengaduan masyarakat (LAPOR) yang sudah diselesaikan",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Tingkat/Persentase",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks tata kelola pengadaan",
+          "kind": "kinerja",
+          "unit_owner": "S4",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks pengelolaan aset",
+          "kind": "kinerja",
+          "unit_owner": "S4",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat maturitas SPIP",
+          "kind": "kinerja",
+          "unit_owner": "IR",
+          "satuan": "Nilai/Level",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat keberhasilan pembangunan ZI",
+          "kind": "kinerja",
+          "unit_owner": "IR",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat kematangan penyelenggaraan statistik sektoral",
+          "kind": "kinerja",
+          "unit_owner": "P2",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai tingkat implementasi kebijakan arsitektur SPBE",
+          "kind": "kinerja",
+          "unit_owner": "P2",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    },
+    {
+      "code": "Imm.O.2.1.3",
+      "title": "Optimalnya Capaian Sasaran Strategis RB",
+      "level_type": "ImmO_L3",
+      "parent_code": "Int.O.2.1",
+      "source_page": "Lampiran I (P2, S1, S2, S3, IR)",
+      "indicators": [
+        {
+          "code": null,
+          "name": "Nilai indeks SPBE",
+          "kind": "kinerja",
+          "unit_owner": "P2",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai capaian prioritas nasional",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai capaian IKU",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai opini BPK",
+          "kind": "kinerja",
+          "unit_owner": "S1",
+          "satuan": "Nilai/Opini",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Indeks BerAkhlak",
+          "kind": "kinerja",
+          "unit_owner": "S2",
+          "satuan": "Indeks",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai Survei Kepuasan Masyarakat",
+          "kind": "kinerja",
+          "unit_owner": "S3",
+          "satuan": "Nilai",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Persentase pelaksanaan tindak lanjut rekomendasi auditor eksternal",
+          "kind": "kinerja",
+          "unit_owner": "IR",
+          "satuan": "%",
+          "target": null
+        },
+        {
+          "code": null,
+          "name": "Nilai survei penilaian integritas (Tingkat keberhasilan pembangunan ZI)",
+          "kind": "kinerja",
+          "unit_owner": "IR",
+          "satuan": "Nilai",
+          "target": null
+        }
+      ]
+    }
+  ]
+}
