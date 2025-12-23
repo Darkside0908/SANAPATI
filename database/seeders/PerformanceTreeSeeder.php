@@ -46,8 +46,10 @@ class PerformanceTreeSeeder extends Seeder
             // 1. First pass: Collect all Units and Create them
             $allUnits = [];
             foreach ($nodes as $nodeData) {
-                if (isset($nodeData['owners']) && is_array($nodeData['owners'])) {
-                    foreach ($nodeData['owners'] as $unitCode) {
+                // Check 'units' or 'owners'
+                $unitCodes = $nodeData['units'] ?? $nodeData['owners'] ?? [];
+                if (is_array($unitCodes)) {
+                    foreach ($unitCodes as $unitCode) {
                         $allUnits[$unitCode] = true;
                     }
                 }
@@ -107,9 +109,10 @@ class PerformanceTreeSeeder extends Seeder
                         $processedInThisLoop++;
 
                         // Attach Owners
-                        if (isset($nodeData['owners']) && is_array($nodeData['owners'])) {
+                        $unitCodes = $nodeData['units'] ?? $nodeData['owners'] ?? [];
+                        if (is_array($unitCodes)) {
                             $unitIds = [];
-                            foreach ($nodeData['owners'] as $uCode) {
+                            foreach ($unitCodes as $uCode) {
                                 if (isset($unitMap[$uCode])) {
                                     $unitIds[] = $unitMap[$uCode];
                                 }

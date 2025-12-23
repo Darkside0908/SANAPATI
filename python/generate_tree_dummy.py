@@ -82,6 +82,9 @@ def generate_strict_tree():
     # Process Int.O.1 Children
     into_1_1_node = None # Reference for later detail adding
 
+    units_pool = ["D1", "D2", "D3", "PSSN", "DIK"]
+    import random
+
     for data in into1_children_data:
         node = {
             "code": data["code"],
@@ -91,6 +94,7 @@ def generate_strict_tree():
             "note": "Diagram 1",
             "source_page": "Diagram 1",
             "indicators": data["indicators"],
+            "units": [random.choice(units_pool)],
             "children": []
         }
         into1["children"].append(node)
@@ -107,9 +111,10 @@ def generate_strict_tree():
         "note": "Diagram 2 Detail",
         "source_page": "Diagram 2",
         "indicators": [
-            create_indicator("Nilai kematangan Keamanan siber PSE"),
-            create_indicator("Nilai kematangan penyelenggaraan persandian")
+            create_indicator("Nilai kematangan Keamanan siber PSE", unit_owner="D1"),
+            create_indicator("Nilai kematangan penyelenggaraan persandian", unit_owner="D2")
         ],
+        "units": ["D1", "D2"],
         "children": []
     }
     into_1_1_node["children"].append(immo_1_1_1)
@@ -120,44 +125,44 @@ def generate_strict_tree():
             "code": "Output 0.1.1.1.a",
             "title": "Fasilitasi dan pembinaan kematangan keamanan siber dan sandi Pemerintah",
             "indicators": [
-                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang mendapat pembinaan kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.a.1"),
-                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang mendapat pembinaan kematangan penyelenggaraan persandian", kind="output", code="I.O.1.1.1.1.a.2")
+                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang mendapat pembinaan kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.a.1", unit_owner="D1"),
+                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang mendapat pembinaan kematangan penyelenggaraan persandian", kind="output", code="I.O.1.1.1.1.a.2", unit_owner="D2")
             ]
         },
         {
             "code": "Output 0.1.1.1.b",
             "title": "Fasilitasi dan pembinaan kematangan keamanan siber sektor privat (pembangunan manusia dan perekonomian)",
             "indicators": [
-                create_indicator("Jumlah lembaga sektor privat (pembangunan manusia dan perekonomian) yang mendapat pembinaan kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.b")
+                create_indicator("Jumlah lembaga sektor privat (pembangunan manusia dan perekonomian) yang mendapat pembinaan kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.b", unit_owner="D3")
             ]
         },
         {
             "code": "Output 0.1.1.1.c",
             "title": "Fasilitasi tim tanggap insiden siber (CSIRT) Pemerintah",
             "indicators": [
-                create_indicator("Jumlah CSIRT lembaga pemerintahan (IPPD) yang mendapat pembinaan keamanan siber", kind="output", code="I.O.1.1.1.1.c")
+                create_indicator("Jumlah CSIRT lembaga pemerintahan (IPPD) yang mendapat pembinaan keamanan siber", kind="output", code="I.O.1.1.1.1.c", unit_owner="PSSN")
             ]
         },
         {
             "code": "Output 0.1.1.1.d",
             "title": "Pengukuran kematangan keamanan siber dan sandi Pemerintah",
             "indicators": [
-                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang diukur tingkat kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.d.1"),
-                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang diukur tingkat kematangan penyelenggaraan persandian", kind="output", code="I.O.1.1.1.1.d.2")
+                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang diukur tingkat kematangan keamanan siber", kind="output", code="I.O.1.1.1.1.d.1", unit_owner="D1"),
+                create_indicator("Jumlah lembaga pemerintahan (IPPD) yang diukur tingkat kematangan penyelenggaraan persandian", kind="output", code="I.O.1.1.1.1.d.2", unit_owner="D2")
             ]
         },
         {
             "code": "Output 0.1.1.1.e",
             "title": "Koordinasi pengukuran kematangan keamanan siber sektor privat (pembangunan manusia dan perekonomian)",
             "indicators": [
-                create_indicator("Jumlah koordinasi pengukuran tingkat kematangan keamanan siber sektor privat (pembangunan manusia dan perekonomian)", kind="output", code="I.O.1.1.1.1.e")
+                create_indicator("Jumlah koordinasi pengukuran tingkat kematangan keamanan siber sektor privat (pembangunan manusia dan perekonomian)", kind="output", code="I.O.1.1.1.1.e", unit_owner="D3")
             ]
         },
         {
             "code": "Output 0.1.1.1.f",
             "title": "Penguatan ekosistem keamanan siber dan sandi",
             "indicators": [
-                create_indicator("Jumlah kegiatan penguatan ekosistem keamanan siber dan sandi", kind="output", code="I.O.1.1.1.1.f")
+                create_indicator("Jumlah kegiatan penguatan ekosistem keamanan siber dan sandi", kind="output", code="I.O.1.1.1.1.f", unit_owner="DIK")
             ]
         }
     ]
