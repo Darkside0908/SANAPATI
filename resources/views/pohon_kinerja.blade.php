@@ -124,24 +124,30 @@
                         <p class="text-blue-800 dark:text-blue-100/80 text-sm leading-relaxed" x-text="selectedNode.note"></p>
                     </div>
 
-                    <!-- Indikator -->
-                    <div class="mb-8">
-                        <h3 class="text-sm font-bold text-fg-primary mb-4 border-l-4 border-brand-purple pl-3">Indikator Kinerja</h3>
+                    <!-- Indikator Kinerja -->
+                    <div x-show="selectedNode.indicators && selectedNode.indicators.length > 0" class="mb-8">
+                        <h3 class="text-sm font-bold text-fg-primary mb-4 border-l-4 border-brand-cyan pl-3">Indikator Kinerja</h3>
                         <div class="grid gap-3">
-                            <template x-if="selectedNode.indicators && selectedNode.indicators.length > 0">
-                                <template x-for="ind in selectedNode.indicators">
-                                    <div class="bg-surface-2 p-4 rounded-xl border border-subtle hover:border-brand-purple/30 transition-all">
-                                        <div class="flex justify-between items-start mb-2">
-                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-purple/10 text-brand-purple" x-text="ind.kind"></span>
-                                            <span x-show="ind.unit_owner" class="text-xs text-fg-secondary font-mono" x-text="ind.unit_owner"></span>
+                            <template x-for="indicator in selectedNode.indicators" :key="indicator.code || indicator.name">
+                                <div class="bg-surface-2 p-4 rounded-xl border border-subtle hover:border-brand-cyan/30 transition-all">
+                                    <h4 class="text-base font-semibold text-fg-primary mb-4" x-text="indicator.name"></h4>
+                                    
+                                    <!-- Target Box for Each Indicator -->
+                                    <div class="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-3">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <div class="flex items-center gap-2">
+                                                <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                                </svg>
+                                                <span class="text-xs font-bold text-orange-500 uppercase tracking-wider">Target</span>
+                                            </div>
+                                            <span class="text-xs font-mono text-fg-secondary" x-text="indicator.satuan || '-'"></span>
                                         </div>
-                                        <p class="text-sm text-fg-primary" x-text="ind.name"></p>
-                                        <div class="mt-3 text-xs text-brand-green font-mono bg-brand-green/5 inline-block px-2 py-1 rounded" x-show="ind.target">Target: <span x-text="ind.target"></span></div>
+                                        <div class="text-sm font-mono">
+                                            <span class="text-fg-primary" x-text="indicator.target || 'Data akan diisi nanti'"></span>
+                                        </div>
                                     </div>
-                                </template>
-                            </template>
-                             <template x-if="!selectedNode.indicators || selectedNode.indicators.length === 0">
-                                <p class="text-sm text-fg-secondary italic">Tidak ada indikator langsung.</p>
+                                </div>
                             </template>
                         </div>
                     </div>
@@ -149,14 +155,17 @@
                         <!-- Unit Penanggung Jawab -->
                     <div>
                         <h3 class="text-sm font-bold text-fg-primary mb-4 border-l-4 border-brand-cyan pl-3">Penanggung Jawab</h3>
-                        <div class="flex flex-wrap gap-2">
-                                <template x-if="selectedNode.units && selectedNode.units.length > 0">
+                        <div class="grid gap-3">
+                            <template x-if="selectedNode.units && selectedNode.units.length > 0">
                                 <template x-for="unit in selectedNode.units">
-                                    <span class="px-3 py-1 bg-surface-3 text-fg-primary rounded text-sm border border-subtle font-mono" x-text="unit.code"></span>
+                                    <div class="bg-surface-2 p-4 rounded-xl border border-subtle hover:border-brand-cyan/30 transition-all">
+                                        <span class="px-3 py-1 bg-surface-3 text-fg-primary rounded text-sm border border-subtle font-mono" x-text="unit.code"></span>
+                                    </div>
                                 </template>
                             </template>
+                            
                             <template x-if="!selectedNode.units || selectedNode.units.length === 0">
-                                <span class="text-sm text-fg-secondary italic">-</span>
+                                <p class="text-sm text-fg-secondary italic">Belum ada data unit penanggung jawab.</p>
                             </template>
                         </div>
                     </div>
