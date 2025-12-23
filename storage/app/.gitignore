@@ -1,0 +1,6 @@
+*
+!private/
+!public/
+!tree/
+!tree/tree.json
+!.gitignore
